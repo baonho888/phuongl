@@ -1,3 +1,6 @@
+local DiscordLib =
+    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
+
 local win = DiscordLib:Window("Béo")
 local serv = win:Server("Duy Hub", "")
 local drops = serv:Channel("! Fram+LocalPlayer")
