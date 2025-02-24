@@ -43,7 +43,7 @@ end)
 drops:Toggle("auto farm money work sea 1", false, function(t)
     aura = t
 dis = tonumber(v)
-for i = 1, 5000050000 do
+for i = 1, 50000 do
 fireclickdetector(workspace.MAP["Event Island"].EventBox.ClickDetector)
 end
 end)
