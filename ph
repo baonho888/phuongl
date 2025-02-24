@@ -1,16 +1,17 @@
 local player = game.Players.LocalPlayer
 
-if player.Name == "bao2008c" or player.Name == "duymakemoney48" or player.Name == "danhrlom" or player.Name == "Danhrlom" or player.Name == "" then
+if player.Name == "bao2008c" or player.Name == "" or player.Name == " " or player.Name == "" or player.Name == "" then
     print("nằm mơ đi em")
 else
     player:Kick("MUA SCRIPT KO FREE")
 end
 
-local DiscordLib =
-    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
+local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()   
+   local win = DiscordLib:Window("[Khánh Ngọc] ".." ")   
+local per = game:GetService("Players").LocalPlayer.Name
+ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok") 
  
-local win = DiscordLib:Window("lê bảo duy vip lê tuấn cook")
-local serv = win:Server("hack riêng VNP 2⭐", "")
+  local serv = win:Server("Duy Hub", "")   
 local drops = serv:Channel("Farm⭐")
 local dis = nil
 local aura = false
