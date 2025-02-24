@@ -12,35 +12,201 @@ local per = game:GetService("Players").LocalPlayer.Name
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok") 
  
   local serv = win:Server("Duy Hub", "")   
-local drops = serv:Channel("Farm⭐")
-local dis = nil
-local aura = false
-local autoQuest = false
-local selectedQuest = ""
-drops:Button("get max level ", function()local player = game.Players.LocalPlayer
-    local data = player:FindFirstChild("Data")
-    if data then
-        local levels = data:FindFirstChild("Levels")
-        if levels then
-            levels.Value = tonumber(1000000000)
-        end
-    end
+local drops = serv:Channel("❕Farm+LocalPlayer")  
+  local questlist = {}
+local quest = nil   
+for i, v in pairs(Workspace["NPC DAMAGE"]:GetChildren()) do
+table.insert(questlist, v.Name)
+end
+   local drop = drops:Dropdown("Mob lv 2000 > lv 20000+", questlist, function(y)
+for i, v in pairs(game.Workspace["NPC DAMAGE"]:GetChildren()) do
+if y == v.Name then
+quest = y
+end
+end
 end)
-drops:Button("hack máu", function()local Players = game:GetService("Players")
-local armors = {"Cursed-Armor", "Unique-Armor", "Darkness-Armor", "Thunder-Armor", "Thunder-Armor", "Diamond-Armor", "Golden-Armor", "Epic-Armor", "Iron-Armor", "Wooden-Armor"} -- Danh sách các loại giáp
- 
-for _, player in pairs(Players:GetPlayers()) do
-    local backpack = player:FindFirstChild("Backpack")
-    if backpack then
-        for _, armorName in pairs(armors) do
-            local armor = backpack:FindFirstChild(armorName)
-            if armor and armor:FindFirstChild("K") and armor.K:FindFirstChild("Fire") then
-                armor.K.Fire:FireServer()
+drops:Button("OneShot⭐", function()
+
+if quest == nil then
+DiscordLib:Notification("Warning","Please Pick Mob","Ok")
+else
+local mob = game:GetService("Workspace")["NPC DAMAGE"][quest]
+local boss = mob.HumanoidRootPart
+local players = game.Players
+local localPlayer = players.LocalPlayer
+local localDistance = (localPlayer.Character.HumanoidRootPart.Position - boss.Position).Magnitude
+-- Tạo một biến để lưu trữ khoảng cách nhỏ nhất
+local minDistance = math.huge -- Một số rất lớn
+    for i, v in ipairs(players:GetPlayers()) do
+        if v ~= localPlayer then
+            local playerDistance = (v.Character.HumanoidRootPart.Position - boss.Position).Magnitude
+            -- Cập nhật biến minDistance nếu có người chơi khác gần hơn
+            if playerDistance < minDistance then
+                minDistance = playerDistance
             end
         end
     end
+    -- So sánh khoảng cách của bạn với biến minDistance
+    if localDistance > minDistance then
+DiscordLib:Notification("Warning","Thằng"..v.Name.."Gần Mob Hơn Bạn","Ok")
+else
+if mob:FindFirstChild("Enemy") then
+while task.wait() do
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
+mob.Enemy.Health = 0 end
+else
+          game.StarterGui:SetCore("SendNotification", { -- SHOW NOTIFIACTION 
+                 Title = "TestHub", -- NOTIFICACTION LABEL 
+                 Text = "Phát Hiện Người Ở Gần Không Thể Oneshot", 
+                 Icon = "", 
+                 Duration = 1 
+             }) 
+    end
+end
 end
 end)
+local skill = cc
+local sk = drops:Dropdown("Chọn Skill",{"Z","X","C","V","B","N"}, function(b)
+cc = b
+end)
+drops:Toggle("Tự Động Skill Khi Boss Chết",false,function(e)
+if cc then
+getgenv().q = e
+while q  do wait(.5)
+repeat wait() until game:GetService("Workspace")["NPC DAMAGE"][quest].Enemy.Health == 0 or getgenv().q == false
+spawn(function()
+for i, v in pairs(game.Players.LocalPlayer.Backpack: GetDescendants()) do
+if v:IsA("RemoteEvent") and v.Parent.Name == cc then
+pcall(function()
+v:FireServer()
+end)
+end
+end
+end)
+end
+else
+DiscordLib:Notification("❗ ","Chọn Skill","Ok")
+end
+end)
+drops:Toggle("Auto Kill",false,function(v)
+if quest then
+_G.Autob = v
+while _G.Autob do task.wait()
+pcall(function()
+if game:GetService("Workspace")["NPC DAMAGE"][quest].Enemy.Health > 0 then
+game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.CFrame*CFrame.new(0,0,11)
+for i, c in pairs(game.Players.LocalPlayer.Backpack: GetChildren()) do
+if c:FindFirstChild("Hitbox") then
+c:WaitForChild("Hitbox"):FireServer()
+end
+end
+else
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(0,1,-13)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(0,4,13)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(-13,1,0)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(10,2,0)
+end
+end)
+end
+else
+DiscordLib: Notification("❗","Chọn Boss","Ok")
+end
+end)
+drops:Toggle("❕ Auto OneShot⭐",false, function(v)
+getgenv().oneshot = v
+if quest == nil then
+DiscordLib:Notification("Warning","Please Pick Mob","Ok")
+else
+while oneshot do wait(0.5)
+pcall(function()
+local mob = game:GetService("Workspace")["NPC DAMAGE"][quest]
+if mob:FindFirstChild("Enemy") then
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
+game:GetService("Workspace")["NPC DAMAGE"][quest].Enemy.Health = 0
+else
+DiscordLib:Notification("Warning","Xảy Ra Lỗi","Ok")
+end
+end)
+end
+end
+end)
+drops:Toggle("Auto Bring",false, function(a)
+if quest == nil then   
+   DiscordLib:Notification("Warning", "Choose Mob To Auto Bring", "Ok")   
+   elseif quest ~= nil then   
+ local v2 = nil 
+  getgenv().bringmob2 = a
+ if v2 then v2:Disconnect() end 
+if bringmob2 ~= v2 then
+v2 = game:GetService("RunService").RenderStepped:Connect(function()
+if bringmob2==false then v2:Disconnect()  end
+game.Workspace["NPC DAMAGE"][quest].HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,5.5,0)
+if quest == "Kaidou" then
+game.Workspace["NPC DAMAGE"][quest].HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,3,-13)
+elseif quest == "Garou" then
+game.Workspace["NPC DAMAGE"][quest].HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,6.6,0)
+elseif quest == "Tango" then
+game.Workspace["NPC DAMAGE"][quest].HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,6.6,0)
+end
+end)
+end
+end
+end)   
+   drops:Toggle("Auto Quest",false, function(questauto)   
+   if quest == nil then   
+   DiscordLib:Notification("Warning", "Choose Mob To Auto Quest", "Ok")   
+   elseif quest ~= nil then   
+   getgenv().autoquest = questauto   
+   spawn(function()   
+   while autoquest do wait()   
+   pcall(function()   
+   if quest == "Kaidou" then   
+   game:GetService("Workspace")["Kaido Island [ Lv 1000+ ]"]["KAIDOUU QUESTTT"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
+   elseif quest == "Paw User" and quest ~= nil then   
+   game:GetService("Workspace")["Platinum Town [ 2000 - 3000 ]"]["Platinum npc"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
+   elseif quest == "King Vampire" and quest ~= nil then   
+   game:GetService("Workspace")["Platinum Town [ 2000 - 3000 ]"]["Platinum npc"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()   
+   elseif quest == "Magma Admiral" and quest ~= nil then   
+   game:GetService("Workspace")["Marine Island [ 3000 - 5000 ]"]["QUEST ADMIRAL"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
+   elseif quest == "String Admiral" and quest ~= nil then   
+   game:GetService("Workspace")["Marine Island [ 3000 - 5000 ]"]["QUEST ADMIRAL"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()   
+   elseif quest == "NickBeo" and quest ~= nil then   
+   game:GetService("Workspace")["NickBeo Island [ 7000 + ]"]["Quest NickBeo"].Quest.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
+   elseif quest == "Tango" and quest ~= nil then   
+   game:GetService("Workspace")["NickBeo Island [ 7000 + ]"]["Quest Tango"].Quest.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
+ elseif quest == "Garou" and quest ~= nil then   
+  game:GetService("Workspace")["Star Island [ Lv 20000+ ]"]["Garou Quest [ Lv 20.000+ ]"].Quest.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
+elseif quest == "Sukuna" and quest ~= nil then
+game:GetService("Workspace")["Cursed Island [  50000+ ]"]["Sukuna Quest [ Lv 50.000+ ]"].Quest.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
+elseif quest == "Grab" and quest ~= nil then
+game:GetService("Workspace")["Grab  Island [ Lv 100000+ ]"]["Grab Quest [ Lv 100.000+ ]"].Quest.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()   
+   end   
+   end)   
+   end   
+   end)   
+   end   
+   end)
+drops:Toggle("🔒Lock Mob",false, function(l)   
+   if quest == nil then   
+   DiscordLib:Notification("Warning", "Choose Mob To Auto Quest", "Ok")   
+   else
+getgenv().lock = l
+game:GetService("RunService").RenderStepped:Connect(function()
+if getgenv().lock then
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
+game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.Anchored = true
+else
+game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.Anchored = false
+end
+end)
+end
+end)
+     
 drops:Toggle("auto farm money work sea 1", false, function(t)
     aura = t
 dis = tonumber(v)
