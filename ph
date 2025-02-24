@@ -159,6 +159,7 @@ drops:Button( "đảo sun",  function()game.Players.LocalPlayer.Character.Humano
 end)
 
 local drops = serv:Channel("auto secret ⭐")
+
 drops:Toggle("auto secret x5", false, function(t)
     aura = t
 while true do fireclickdetector(game:GetService("Workspace").MAP["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM)
@@ -171,6 +172,7 @@ drops:Dropdown(
     function(bool)
         print(bool)
    end)
+
 local drops = serv:Channel("Fast Attack⭐")
  
 drops:Dropdown("Chọn Fast Attack", {
