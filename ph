@@ -494,6 +494,8 @@ local drops = serv:Channel("Auto raid⭐")
     end
 end)
 
+
+
 drops:Toggle("Kill Aura Humanoid", false, function(t)
     aura = t
     if not dis then
