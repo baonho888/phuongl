@@ -43,7 +43,7 @@ end)
 drops:Toggle("auto farm money work sea 1", false, function(t)
     aura = t
 dis = tonumber(v)
-for i = 1, 1000 do
+for i = 1, 5000050000 do
 fireclickdetector(workspace.MAP["Event Island"].EventBox.ClickDetector)
 end
 end)
@@ -158,6 +158,19 @@ end)
 drops:Button( "đảo sun",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1603, 87700, -2191)
 end)
 
+local drops = serv:Channel("auto secret ⭐")
+drops:Toggle("auto secret x5", false, function(t)
+    aura = t
+while true do fireclickdetector(game:GetService("Workspace").MAP["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM)
+wait(0.001)
+end
+end)
+drops:Dropdown(
+    "select ⚪",
+    {"secret sea 2", "Sando", "Yorus v3", "random 50k", "random 350k"},
+    function(bool)
+        print(bool)
+   end)
 local drops = serv:Channel("Fast Attack⭐")
  
 drops:Dropdown("Chọn Fast Attack", {
@@ -471,6 +484,7 @@ drops:Textbox("fake level", "Số level", true, function(level)
 end)
 
 local drops = serv:Channel("Auto raid⭐")
+
     drops:Textbox("Distance aura", "Type a number", true, function(v)
     dis = tonumber(v)
     if not dis then
