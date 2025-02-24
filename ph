@@ -1,6 +1,6 @@
 local player = game.Players.LocalPlayer
 
-if player.Name == "bao2008c" or player.Name == "duymakemoney48" or player.Name == "danhrlom" or player.Name == "Danhrlom" or player.Name == "" then
+if player.Name == "bao2008c" or player.Name == "duymakemoney48" or player.Name == "danhrlom" or player.Name == "" or player.Name == "" then
     print("nằm mơ đi em")
 else
     player:Kick("MUA SCRIPT KO FREE")
@@ -9,7 +9,7 @@ end
 local DiscordLib =
     loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
  
-local win = DiscordLib:Window("lê bảo duy vip lê tuấn cook")
+local win = DiscordLib:Window("Ngu ")
 local serv = win:Server("hack riêng VNP 2⭐", "")
 local drops = serv:Channel("Farm⭐")
 local dis = nil
@@ -25,27 +25,27 @@ drops:Button("get max level ", function()local player = game.Players.LocalPlayer
         end
     end
 end)
-drops:Button("hack máu", function()local Players = game:GetService("Players")
-local armors = {"Cursed-Armor", "Unique-Armor", "Darkness-Armor", "Thunder-Armor", "Thunder-Armor", "Diamond-Armor", "Golden-Armor", "Epic-Armor", "Iron-Armor", "Wooden-Armor"} -- Danh sách các loại giáp
- 
-for _, player in pairs(Players:GetPlayers()) do
-    local backpack = player:FindFirstChild("Backpack")
-    if backpack then
-        for _, armorName in pairs(armors) do
-            local armor = backpack:FindFirstChild(armorName)
-            if armor and armor:FindFirstChild("K") and armor.K:FindFirstChild("Fire") then
-                armor.K.Fire:FireServer()
-            end
-        end
-    end
-end
-end)
-drops:Toggle("auto farm money work sea 1", false, function(t)
+drops:Toggle("hitbox all", false, function(t)
     aura = t
 dis = tonumber(v)
-for i = 1, 50000 do
-fireclickdetector(workspace.MAP["Event Island"].EventBox.ClickDetector)
+_G.HeadSize = 5000
+_G.Disabled = true
+ 
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
 end
+end
+end
+end)
 end)
 
 drops:Dropdown("Chọn Auto Quest", {
@@ -120,8 +120,7 @@ end
 end
 end)
 
-local drops = serv:Channel("Teleport island⭐")
-
+local drops = serv:Channel("Teleport island")
 drops:Button("đảo khởi đầu", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485.583771, 35.5632935, -511.945404)
 end)
 drops:Button("đảo tuyết", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-915.918945, 33.7605095, 282.443604)
@@ -136,7 +135,6 @@ drops:Button("đảo minh mama", function()game.Players.LocalPlayer.Character.Hu
 end)
 drops:Button( "đảo dark", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3465.68188, 66.2542191, 3718.19531)
 end)
-
 
 
 drops:Button( "đảo kaido", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-685, 87690, 789)
@@ -158,6 +156,40 @@ end)
 drops:Button( "đảo sun",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1603, 87700, -2191)
 end)
 
+local drops = serv:Channel("auto secret ⭐")
+drops:Toggle("auto secret x5", false, function(t)
+    aura = t
+while true do fireclickdetector(game:GetService("Workspace").MAP["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM)
+wait(0.001)
+end
+end)
+drops:Dropdown(
+    "select ⚪",
+    {"secret sea 2", "Sando", "Yorus v3", "random 50k", "random 350k"},
+    function(bool)
+        print(bool)
+   end)
+drops:Button("hack máu", function()local Players = game:GetService("Players")
+local armors = {"Cursed-Armor", "Unique-Armor", "Darkness-Armor", "Thunder-Armor", "Thunder-Armor", "Diamond-Armor", "Golden-Armor", "Epic-Armor", "Iron-Armor", "Wooden-Armor"} -- Danh sách các loại giáp
+ 
+for _, player in pairs(Players:GetPlayers()) do
+    local backpack = player:FindFirstChild("Backpack")
+    if backpack then
+        for _, armorName in pairs(armors) do
+            local armor = backpack:FindFirstChild(armorName)
+            if armor and armor:FindFirstChild("K") and armor.K:FindFirstChild("Fire") then
+                armor.K.Fire:FireServer()
+            end
+        end
+    end
+end
+end)
+drops:Toggle("auto farm money work sea 1", false, function(t)
+    aura = t
+dis = tonumber(v)
+for i = 1, 50000 do
+fireclickdetector(workspace.MAP["Event Island"].EventBox.ClickDetector)
+end
 local drops = serv:Channel("Fast Attack⭐")
  
 drops:Dropdown("Chọn Fast Attack", {
@@ -468,4 +500,113 @@ drops:Textbox("fake level", "Số level", true, function(level)
             levels.Value = tonumber(level)
         end
     end
+end)
+drops:Button("skill", function()
+end)
+drops:Toggle("skill Z gojo", false, function(t)
+    aura = t
+dis = tonumber(v)
+while true do
+game:GetService("Players").LocalPlayer.Character.Gojo.Z.Fire:FireServer()
+wait(0.1)
+end
+end)
+drops:Toggle("Skill X gojo ", false, function(t)
+    aura = t
+dis = tonumber(v)
+while true do
+game:GetService("Players").LocalPlayer.Character.Gojo.X.Fire:FireServer()
+wait(0.1)
+end
+end)
+drops:Toggle("skill C gojo + bug black ", false, function(t)
+    aura = t
+dis = tonumber(v)
+while true do
+game:GetService("Players").LocalPlayer.Character.Gojo.C.Fire:FireServer()
+wait(0.1)
+end
+end)
+local drops = serv:Channel("Auto raid⭐")
+    drops:Textbox("Distance aura", "Type a number", true, function(v)
+    dis = tonumber(v)
+    if not dis then
+        DiscordLib:Notification("Error", "Please enter a valid number for Distance", "Ok")
+    end
+end)
+
+drops:Toggle("Kill Aura Humanoid", false, function(t)
+    aura = t
+    if not dis then
+        DiscordLib:Notification("Warning", "Choose Distance for Kill Aura", "Ok")
+        return
+    end
+    while aura do
+        wait(0.1)
+        for _, v in pairs(game:GetService("Workspace")["NPC DAMAGE"]:GetDescendants()) do
+            local humanoid = v:FindFirstChildOfClass("Humanoid")
+            local rootPart = v:FindFirstChild("HumanoidRootPart")
+            if humanoid and rootPart and humanoid.Health > 0 and v.Name ~= game.Players.LocalPlayer.Name then
+                local distance = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - rootPart.Position).Magnitude
+                if distance <= dis then
+                    pcall(function()
+                        repeat
+                            wait()
+                            humanoid.Health = 0
+                            rootPart.CanCollide = false
+                            sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                        until humanoid.Health <= 0 or not aura
+                    end)
+                end
+            end
+        end
+    end
+end)
+drops:Toggle("auto dark orb store đừng sài ⚠️", false, function(t)
+    aura = t
+dis = tonumber(v)
+while true do
+local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage").Save.SavingEvent:FireServer(unpack(args))
+wait(0.1)
+end
+end)
+drops:Toggle("auto sjw store Đừng sài ⚠️", false, function(t)
+    aura = t
+dis = tonumber(v)
+while true do
+local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage").Save.SavingEvent:FireServer(unpack(args))
+wait(0.1)
+end
+end)
+drops:Toggle("TP to raid", false, function(t)
+    aura = t
+dis = tonumber(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(578.97998, 33.2999954, -460.05011, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+local sldr = sldrs:Slider("Tốc độ", 0, 150, 100, function(t) 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = t 
+end)
+
+sldrs:Button("Tốc độ 50", function() 
+    sldr:Change(50) 
+end)
+
+sldrs:Button("Tốc độ 75", function() 
+    sldr:Change(75) 
+end)
+
+sldrs:Button("Tốc độ 100", function() 
+    sldr:Change(100) 
+end)
+
+sldrs:Button("Tốc độ 150", function() 
+    sldr:Change(150) 
 end)
