@@ -1,6 +1,6 @@
 local player = game.Players.LocalPlayer
 
-if player.Name == "bao2008c" or player.Name == "duymakemoney48" or player.Name == "danhrlom" or player.Name == "" or player.Name == "" then
+if player.Name == "bao2008c" or player.Name == "duymakemoney48" or player.Name == "danhrlom" or player.Name == "Danhrlom" or player.Name == "" then
     print("nằm mơ đi em")
 else
     player:Kick("MUA SCRIPT KO FREE")
@@ -9,7 +9,7 @@ end
 local DiscordLib =
     loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
  
-local win = DiscordLib:Window("Ngu ")
+local win = DiscordLib:Window("lê bảo duy vip lê tuấn cook")
 local serv = win:Server("hack riêng VNP 2⭐", "")
 local drops = serv:Channel("Farm⭐")
 local dis = nil
@@ -25,29 +25,6 @@ drops:Button("get max level ", function()local player = game.Players.LocalPlayer
         end
     end
 end)
-drops:Toggle("hitbox all", false, function(t)
-    aura = t
-dis = tonumber(v)
-_G.HeadSize = 50005000
-_G.Disabled = true
- 
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.Disabled then
-for i,v in next, game:GetService('Players'):GetPlayers() do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-pcall(function()
-v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-v.Character.HumanoidRootPart.Transparency = 0.7
-v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
-v.Character.HumanoidRootPart.Material = "Neon"
-v.Character.HumanoidRootPart.CanCollide = false
-end)
-end
-end
-end
-end)
-end)
-
 drops:Dropdown("Chọn Auto Quest", {
 "Auto Quest 1 - Pride",
 "Auto Quest 2 - Grab",
@@ -120,7 +97,42 @@ end
 end
 end)
 
+local drops = serv:Channel("Teleport island")
+drops:Button("đảo khởi đầu", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485.583771, 35.5632935, -511.945404)
+end)
+drops:Button("đảo tuyết", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-915.918945, 33.7605095, 282.443604)
+end)
+drops:Button( "đảo cát",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-708.765259, 69.1108398, 1745.13916)
+end)
+drops:Button("đảo trời", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4594.52393, 4279.44092, 474.423523)
+end)
+drops:Button("thị trấn end",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2223.75146, 36.3414612, 1965.90369)
+end)
+drops:Button("đảo minh mama", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2569.90283, 51.1074524, -65.4458542)
+end)
+drops:Button( "đảo dark", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3465.68188, 66.2542191, 3718.19531)
+end)
 
+
+
+drops:Button( "đảo kaido", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-685, 87690, 789)
+end)
+drops:Button("đảo platium", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1258, 87700, 3260)
+end)
+drops:Button( "đảo marine",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-160, 87750, -2010)
+end)
+drops:Button( "đảo nickbeo", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1600, 87700, 637)
+end)
+drops:Button("đảo garou", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1600, 87700, 1073)
+end)
+drops:Button( "đảo sukuna",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1500, 87700, 2800)
+end)
+drops:Button("đảo grab",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2040, 87700, 50)
+end)		
+drops:Button("đảo cid và geto",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1635, 87710, -1085)
+end)
+drops:Button( "đảo sun",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1603, 87700, -2191)
+end)
 
 local drops = serv:Channel("auto secret ⭐")
 drops:Toggle("auto secret x5", false, function(t)
@@ -156,6 +168,34 @@ dis = tonumber(v)
 for i = 1, 50000 do
 fireclickdetector(workspace.MAP["Event Island"].EventBox.ClickDetector)
 end
+end)
+
+local drops = serv:Channel("Troll+Anti⭐")
+drops:Toggle("skill Z gojo", false, function(t)
+    aura = t
+dis = tonumber(v)
+while true do
+game:GetService("Players").LocalPlayer.Character.Gojo.Z.Fire:FireServer()
+wait(0.1)
+end
+end)
+drops:Toggle("Skill X gojo ", false, function(t)
+    aura = t
+dis = tonumber(v)
+while true do
+game:GetService("Players").LocalPlayer.Character.Gojo.X.Fire:FireServer()
+wait(0.1)
+end
+end)
+drops:Toggle("skill C gojo + bug black ", false, function(t)
+    aura = t
+dis = tonumber(v)
+while true do
+game:GetService("Players").LocalPlayer.Character.Gojo.C.Fire:FireServer()
+wait(0.1)
+end
+end)
+
 local drops = serv:Channel("Fast Attack⭐")
  
 drops:Dropdown("Chọn Fast Attack", {
@@ -467,29 +507,87 @@ drops:Textbox("fake level", "Số level", true, function(level)
         end
     end
 end)
-drops:Button("skill", function()
+
+local drops = serv:Channel("Auto raid⭐")
+    drops:Textbox("Distance aura", "Type a number", true, function(v)
+    dis = tonumber(v)
+    if not dis then
+        DiscordLib:Notification("Error", "Please enter a valid number for Distance", "Ok")
+    end
 end)
-drops:Toggle("skill Z gojo", false, function(t)
+
+drops:Toggle("Kill Aura Humanoid", false, function(t)
+    aura = t
+    if not dis then
+        DiscordLib:Notification("Warning", "Choose Distance for Kill Aura", "Ok")
+        return
+    end
+    while aura do
+        wait(0.1)
+        for _, v in pairs(game:GetService("Workspace")["NPC DAMAGE"]:GetDescendants()) do
+            local humanoid = v:FindFirstChildOfClass("Humanoid")
+            local rootPart = v:FindFirstChild("HumanoidRootPart")
+            if humanoid and rootPart and humanoid.Health > 0 and v.Name ~= game.Players.LocalPlayer.Name then
+                local distance = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - rootPart.Position).Magnitude
+                if distance <= dis then
+                    pcall(function()
+                        repeat
+                            wait()
+                            humanoid.Health = 0
+                            rootPart.CanCollide = false
+                            sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                        until humanoid.Health <= 0 or not aura
+                    end)
+                end
+            end
+        end
+    end
+end)
+drops:Toggle("auto dark orb store đừng sài ⚠️", false, function(t)
     aura = t
 dis = tonumber(v)
 while true do
-game:GetService("Players").LocalPlayer.Character.Gojo.Z.Fire:FireServer()
+local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage").Save.SavingEvent:FireServer(unpack(args))
 wait(0.1)
 end
 end)
-drops:Toggle("Skill X gojo ", false, function(t)
+drops:Toggle("auto sjw store Đừng sài ⚠️", false, function(t)
     aura = t
 dis = tonumber(v)
 while true do
-game:GetService("Players").LocalPlayer.Character.Gojo.X.Fire:FireServer()
+local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage").Save.SavingEvent:FireServer(unpack(args))
 wait(0.1)
 end
 end)
-drops:Toggle("skill C gojo + bug black ", false, function(t)
+drops:Toggle("TP to raid", false, function(t)
     aura = t
 dis = tonumber(v)
-while true do
-game:GetService("Players").LocalPlayer.Character.Gojo.C.Fire:FireServer()
-wait(0.1)
-end
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(578.97998, 33.2999954, -460.05011, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+local sldr = sldrs:Slider("Tốc độ", 0, 150, 100, function(t) 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = t 
+end)
+
+sldrs:Button("Tốc độ 50", function() 
+    sldr:Change(50) 
+end)
+
+sldrs:Button("Tốc độ 75", function() 
+    sldr:Change(75) 
+end)
+
+sldrs:Button("Tốc độ 100", function() 
+    sldr:Change(100) 
+end)
+
+sldrs:Button("Tốc độ 150", function() 
+    sldr:Change(150) 
 end)
