@@ -137,25 +137,6 @@ drops:Button( "đảo dark", function()game.Players.LocalPlayer.Character.Humano
 end)
 
 
-drops:Button( "đảo kaido", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-685, 87690, 789)
-end)
-drops:Button("đảo platium", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1258, 87700, 3260)
-end)
-drops:Button( "đảo marine",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-160, 87750, -2010)
-end)
-drops:Button( "đảo nickbeo", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1600, 87700, 637)
-end)
-drops:Button("đảo garou", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1600, 87700, 1073)
-end)
-drops:Button( "đảo sukuna",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1500, 87700, 2800)
-end)
-drops:Button("đảo grab",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2040, 87700, 50)
-end)		
-drops:Button("đảo cid và geto",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1635, 87710, -1085)
-end)
-drops:Button( "đảo sun",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1603, 87700, -2191)
-end)
-
 local drops = serv:Channel("auto secret ⭐")
 drops:Toggle("auto secret x5", false, function(t)
     aura = t
