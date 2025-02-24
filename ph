@@ -1,3 +1,11 @@
+local player = game.Players.LocalPlayer
+
+if player.Name == "bao2008c" or player.Name == "duymakemoney48" or player.Name == "danhrlom" or player.Name == "Danhrlom" or player.Name == "" then
+    print("nằm mơ đi em")
+else
+    player:Kick("MUA SCRIPT KO FREE")
+end
+
 local DiscordLib =
     loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
  
@@ -17,6 +25,29 @@ drops:Button("get max level ", function()local player = game.Players.LocalPlayer
         end
     end
 end)
+drops:Button("hack máu", function()local Players = game:GetService("Players")
+local armors = {"Cursed-Armor", "Unique-Armor", "Darkness-Armor", "Thunder-Armor", "Thunder-Armor", "Diamond-Armor", "Golden-Armor", "Epic-Armor", "Iron-Armor", "Wooden-Armor"} -- Danh sách các loại giáp
+ 
+for _, player in pairs(Players:GetPlayers()) do
+    local backpack = player:FindFirstChild("Backpack")
+    if backpack then
+        for _, armorName in pairs(armors) do
+            local armor = backpack:FindFirstChild(armorName)
+            if armor and armor:FindFirstChild("K") and armor.K:FindFirstChild("Fire") then
+                armor.K.Fire:FireServer()
+            end
+        end
+    end
+end
+end)
+drops:Toggle("auto farm money work sea 1", false, function(t)
+    aura = t
+dis = tonumber(v)
+for i = 1, 1000 do
+fireclickdetector(workspace.MAP["Event Island"].EventBox.ClickDetector)
+end
+end)
+
 drops:Dropdown("Chọn Auto Quest", {
 "Auto Quest 1 - Pride",
 "Auto Quest 2 - Grab",
@@ -88,28 +119,45 @@ end
 end
 end
 end)
-drops:Button("hack máu", function()local Players = game:GetService("Players")
-local armors = {"Cursed-Armor", "Unique-Armor", "Darkness-Armor", "Thunder-Armor", "Thunder-Armor", "Diamond-Armor", "Golden-Armor", "Epic-Armor", "Iron-Armor", "Wooden-Armor"} -- Danh sách các loại giáp
- 
-for _, player in pairs(Players:GetPlayers()) do
-    local backpack = player:FindFirstChild("Backpack")
-    if backpack then
-        for _, armorName in pairs(armors) do
-            local armor = backpack:FindFirstChild(armorName)
-            if armor and armor:FindFirstChild("K") and armor.K:FindFirstChild("Fire") then
-                armor.K.Fire:FireServer()
-            end
-        end
-    end
-end
+
+local drops = serv:Channel("Teleport island⭐")
+   
+drops:Button("đảo khởi đầu", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485.583771, 35.5632935, -511.945404)
 end)
-drops:Toggle("auto farm money work sea 1", false, function(t)
-    aura = t
-dis = tonumber(v)
-for i = 1, 1000 do
-fireclickdetector(workspace.MAP["Event Island"].EventBox.ClickDetector)
-end
+drops:Button("đảo tuyết", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-915.918945, 33.7605095, 282.443604)
 end)
+drops:Button( "đảo cát",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-708.765259, 69.1108398, 1745.13916)
+end)
+drops:Button("đảo trời", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4594.52393, 4279.44092, 474.423523)
+end)
+drops:Button("thị trấn end",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2223.75146, 36.3414612, 1965.90369)
+end)
+drops:Button("đảo minh mama", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2569.90283, 51.1074524, -65.4458542)
+end)
+drops:Button( "đảo dark", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3465.68188, 66.2542191, 3718.19531)
+end)
+
+
+
+drops:Button( "đảo kaido", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-685, 87690, 789)
+end)
+drops:Button("đảo platium", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1258, 87700, 3260)
+end)
+drops:Button( "đảo marine",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-160, 87750, -2010)
+end)
+drops:Button( "đảo nickbeo", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1600, 87700, 637)
+end)
+drops:Button("đảo garou", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1600, 87700, 1073)
+end)
+drops:Button( "đảo sukuna",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1500, 87700, 2800)
+end)
+drops:Button("đảo grab",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2040, 87700, 50)
+end)		
+drops:Button("đảo cid và geto",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1635, 87710, -1085)
+end)
+drops:Button( "đảo sun",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1603, 87700, -2191)
+end)
+
 local drops = serv:Channel("Fast Attack⭐")
  
 drops:Dropdown("Chọn Fast Attack", {
