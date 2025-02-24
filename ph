@@ -11,7 +11,7 @@ local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bl
 local per = game:GetService("Players").LocalPlayer.Name
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok") 
  
-  local serv = win:Server("Nang Hub", "")   
+  local serv = win:Server("NangNang Hub", "")   
 local drops = serv:Channel("❕Farm+LocalPlayer")  
   local questlist = {}
 local quest = nil   
