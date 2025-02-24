@@ -1,3 +1,11 @@
+local player = game.Players.LocalPlayer
+
+if player.Name == "bao2008c" or player.Name == "duymakemoney48" or player.Name == "danhrlom" or player.Name == "Danhrlom" or player.Name == "" then
+    print("nằm mơ đi em")
+else
+    player:Kick("MUA SCRIPT KO FREE")
+end
+
 local DiscordLib =
     loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
  
