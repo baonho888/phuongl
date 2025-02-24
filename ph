@@ -206,7 +206,19 @@ end
 end)
 end
 end)
-     
+
+drops:Toggle("⭐Auto Armor",false, function(o)  
+  getgenv().autobuffhp = o  
+  while autobuffhp do wait()  
+  for i, v in pairs(game.Players:GetDescendants()) do  
+  if v:IsA("RemoteEvent") and v.Name == "Fire" and v:FindFirstChild("Armor") then  
+  v:FireServer()  
+  if autobuffhp == false then break; end  
+  end  
+  end  
+  end  
+  end)  
+
 drops:Toggle("auto farm money work sea 1", false, function(t)
     aura = t
 dis = tonumber(v)
