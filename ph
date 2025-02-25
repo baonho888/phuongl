@@ -915,6 +915,30 @@ drops:Textbox("fake level", "Số level", true, function(level)
     end
 end)
 
+local KillingCheats = PhantomForcesWindow:NewSection("gamepass có thể sài free bằng hack")
+
+KillingCheats:CreateButton("atomic godmode can't move", function()game:GetService("ReplicatedStorage"):WaitForChild("AtomicFolder"):WaitForChild("Event"):FireServer()
+end)
+KillingCheats:CreateButton("sukuna phở bò", function()game:GetService("ReplicatedStorage"):WaitForChild("AssetsSukuna"):WaitForChild("Remtoes"):WaitForChild("Fire"):FireServer()
+
+    
+end)
+KillingCheats:CreateButton("kameha!", function()local args = {
+    [1] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Kamehameha"):WaitForChild("Remotes"):WaitForChild("KamehamehaEvent"):FireServer(unpack(args))
+
+end)
+KillingCheats:CreateButton("pickerball", function()local args = {
+    [1] = CFrame.new(440.29046630859375, 8825.962890625, 1634.361572265625, -0.8660861849784851, 0.48192232847213745, -0.13283732533454895, 7.450581485102248e-09, 0.2657305598258972, 0.964047372341156, 0.4998948574066162, 0.8349481225013733, -0.23014554381370544),
+    [2] = Vector3.new(438.71490478515625, 8819.107421875, 1635.276123046875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("PachinkoBall"):FireServer(unpack(args))
+
+end)
+
 local drops = serv:Channel("Auto raid⭐")
 
     drops:Textbox("Distance aura", "Type a number", true, function(v)
