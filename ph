@@ -928,7 +928,7 @@ for _, player in pairs(Players:GetPlayers()) do
         end
     end
 end
-end)
+
 
 local drops = serv:Channel("Auto raid⭐")
 
