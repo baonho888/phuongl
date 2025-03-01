@@ -915,6 +915,7 @@ drops:Textbox("fake level", "Số level", true, function(level)
     end
 end)
 
+
 local drops = serv:Channel("Auto raid⭐")
 
     drops:Textbox("Distance aura", "Type a number", true, function(v)
