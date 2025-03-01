@@ -908,28 +908,6 @@ drops:Textbox("fake level", "Số level", true, function(level)
     end
 end)
 
-
-local Players = game:GetService("Players")
-
-for _, player in pairs(Players:GetPlayers()) do
-    if player and player:FindFirstChild("Backpack") then
-        local backpack = player.Backpack
-
-        -- Lặp qua toàn bộ item trong Backpack
-        for _, item in pairs(backpack:GetChildren()) do
-            if item:IsA("Tool") or item:IsA("Model") then -- Chỉ xét item hợp lệ
-                for _, property in pairs(item:GetChildren()) do
-                    if property:IsA("RemoteEvent") then -- Nếu item có thuộc tính FireServer
-                        property:FireServer(RealTripleKatana)
-                        print(player.Name .. " đã kích hoạt " .. item.Name .. " -> " .. property.Name .. "!")
-                    end
-                end
-            end
-        end
-    end
-end
-
-
 local drops = serv:Channel("Auto raid⭐")
 
     drops:Textbox("Distance aura", "Type a number", true, function(v)
