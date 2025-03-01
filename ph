@@ -904,6 +904,7 @@ drops:Button("Check Health", function()
         end
     end
 end)
+
 drops:Textbox("fake level", "Số level", true, function(level)
     local player = game.Players.LocalPlayer
     local data = player:FindFirstChild("Data")
@@ -954,6 +955,7 @@ drops:Toggle("Kill Aura Humanoid", false, function(t)
         end
     end
 end)
+
 drops:Toggle("auto dark orb store đừng sài ⚠️", false, function(t)
     aura = t
 dis = tonumber(v)
