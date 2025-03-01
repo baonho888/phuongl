@@ -935,6 +935,7 @@ for _, player in pairs(Players:GetPlayers()) do
     end
 end)
 
+
 local drops = serv:Channel("Auto raid⭐")
 
     drops:Textbox("Distance aura", "Type a number", true, function(v)
