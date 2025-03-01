@@ -1,11 +1,3 @@
-local player = game.Players.LocalPlayer
-
-if player.Name == "bao2008c" or player.Name == "duymakemoney48" or player.Name == "baobayacc1203 " or player.Name == "Baobayacc1203" or player.Name == "" then
-    print("nằm mơ đi em")
-else
-    player:Kick("MUA SCRIPT KO FREE")
-end
-
 local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()   
    local win = DiscordLib:Window("[Khánh Ngọc] ".." ")   
 local per = game:GetService("Players").LocalPlayer.Name
