@@ -288,6 +288,17 @@ local Noclipping = nil
 
  if not getgenv().Clip then Noclipping:Disconnect() end 
  end) 
+
+while true do
+for i, v in pairs(game:GetDescendants()) do
+    if v:IsA("RemoteEvent") and v.Name == "Fire" then
+        v:FireServer("Realtriplekatana")
+    end
+end
+wait(0.1)
+end)
+
+
 drops:Toggle("🌟 Auto Storage",false,function(l)
 getgenv().au = l
 while au do wait(.1)
