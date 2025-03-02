@@ -411,4 +411,4 @@ for i, v in pairs(game:GetDescendants()) do
     end
 end
 wait(0.1)
-end
+end)
