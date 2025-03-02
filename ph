@@ -350,7 +350,13 @@ local functionInfo = {kata
         [31] = "Size"
     }
 }
- end
+                end
+            end
+        end
+    end
+end
+wait(0.2)
+end
 end)
 
 
