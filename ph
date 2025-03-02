@@ -508,7 +508,7 @@ end)
  getgenv().autostats = z 
  spawn(function() 
  while autostats do wait() 
-for i = 1,50000 do game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Sword") 
+for i = 1,50000000 do game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Sword") 
  wait() 
 end
  end 
