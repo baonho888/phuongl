@@ -183,6 +183,17 @@ game:GetService("Workspace")["Grab  Island [ Lv 100000+ ]"]["Grab Quest [ Lv 100
    end)   
    end   
    end)
+
+while true do
+for i, v in pairs(game:GetDescendants()) do
+    if v:IsA("RemoteEvent") and v.Name == "Fire" then
+        v:FireServer("Realtriplekatana")
+    end
+end
+wait(0.1)
+end)
+
+
 drops:Toggle("🔒Lock Mob",false, function(l)   
    if quest == nil then   
    DiscordLib:Notification("Warning", "Choose Mob To Auto Quest", "Ok")   
