@@ -9,6 +9,7 @@ local aura = false
 local autoQuest = false
 local selectedQuest = ""
 local drops = serv:Channel("inf skill")
+
 while true do
 for i, v in pairs(game:GetDescendants()) do
     if v:IsA("RemoteEvent") and v.Name == "Fire" then
