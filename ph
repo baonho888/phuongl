@@ -17,6 +17,8 @@ drops:Button("get max level ", function()local player = game.Players.LocalPlayer
         end
     end
 end)
+
+
 drops:Toggle("hitbox all", false, function(t)
     aura = t
 dis = tonumber(v)
@@ -177,6 +179,7 @@ for _, player in pairs(Players:GetPlayers()) do
     end
 end
 end)
+
 drops:Toggle("auto farm money work sea 1", false, function(t)
     aura = t
 dis = tonumber(v)
