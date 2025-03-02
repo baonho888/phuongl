@@ -432,14 +432,6 @@ local dropdown = drops:Dropdown("chỉ hoạt đông khi người trong setver c
     end
 end)
  
-while true do
-for i, v in pairs(game:GetDescendants()) do
-    if v:IsA("RemoteEvent") and v.Name == "Fire" then
-        v:FireServer("Realtriplekatana")
-    end
-end
-wait(0.1)
-end
  
 local drops = serv:Channel("check+fake⭐")
 local selectedPlayer = nil
