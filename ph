@@ -40,7 +40,3 @@ end
 end)
 end)
 
-drops:Button("inf skill ", false, function()local player = game.Players.LocalPlayer
-for i = 1, 100 do
-workspace.MAP["STARTER ISLAND [ Lv 1+ ]"]:GetChildren()[5]["Real Triple Katana"].Z.Fire:FireServer()
-end
