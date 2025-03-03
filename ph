@@ -18,14 +18,6 @@ drops:Button("get max level ", function()local player = game.Players.LocalPlayer
     end
 end)
 
-local drops = serv:Channel("Teleport island")
-drops:Toggle("inf skill", false, function(t)
-    aura = t
-dis = tonumber(v)
-for i = 1, 100 do
-workspace.MAP["STARTER ISLAND [ Lv 1+ ]"]:GetChildren()[5]["Real Triple Katana"].Z.Fire:FireServer()
-end
-
 drops:Toggle("hitbox all", false, function(t)
     aura = t
 dis = tonumber(v)
