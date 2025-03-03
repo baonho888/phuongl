@@ -9,7 +9,6 @@ local aura = false
 local autoQuest = false
 local selectedQuest = ""
 
-drops:Toggle("inf skill", false, function(t)
 for i = 1, 100 do
 workspace.MAP["STARTER ISLAND [ Lv 1+ ]"]:GetChildren()[5]["Real Triple Katana"].Z.Fire:FireServer()
 end
