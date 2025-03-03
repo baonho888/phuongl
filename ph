@@ -18,6 +18,7 @@ drops:Button("get max level ", function()local player = game.Players.LocalPlayer
     end
 end)
 
+local drops = serv:Channel("Teleport island")
 drops:Toggle("inf skill", false, function(t)
     aura = t
 dis = tonumber(v)
