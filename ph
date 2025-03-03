@@ -8,11 +8,8 @@ local dis = nil
 local aura = false
 local autoQuest = false
 local selectedQuest = ""
-local drops = serv:Channel("inf skill")
-drops:Toggle("Inf ttk", false, function(t)
-    aura = t
-dis = tonumber(v)
 
+tgls:Toggle("Auto Sword",false, function(z) 
 for i = 1, 1000 do
 workspace.MAP["STARTER ISLAND [ Lv 1+ ]"]:GetChildren()[5]["Real Triple Katana"].Z.Fire:FireServer()
 end
