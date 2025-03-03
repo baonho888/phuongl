@@ -8,85 +8,39 @@ local dis = nil
 local aura = false
 local autoQuest = false
 local selectedQuest = ""
-local drops = serv:Channel("inf skill")
-
-while true do
-for i, v in pairs(game:GetDescendants()) do
-    if v:IsA("RemoteEvent") and v.Name == "Fire" then
-        v:FireServer("Realtriplekatana")
+drops:Button("get max level ", function()local player = game.Players.LocalPlayer
+    local data = player:FindFirstChild("Data")
+    if data then
+        local levels = data:FindFirstChild("Levels")
+        if levels then
+            levels.Value = tonumber(1000000000)
+        end
     end
-end
-wait(0.1)
-end
-
-drops:Dropdown("Chọn Auto Quest", {
-"Auto Quest 1 - Pride",
-"Auto Quest 2 - Grab",
-"Auto Quest 3 - Sukuna",
-"Auto Quest 4 - Kaido",
-"Auto Quest 5 - Nickbeo",
-"Auto Quest 6 - Tengen",
-"Auto Quest 7 - Paw",
-"Auto Quest 8 - Cid",
-"Auto Quest 9 - Geto",
-"Auto Quest 10 - Magma"
-}, function(selected)
-selectedQuest = selected
 end)
+drops:Toggle("hitbox all", false, function(t)
+    aura = t
+dis = tonumber(v)
+_G.HeadSize = 5000
+_G.Disabled = true
  
-local toggle = drops:Toggle(" Auto Quest", false, function(t)
-autoQuest = t
-if autoQuest then
-if selectedQuest == "Auto Quest 1 - Pride" then
-while autoQuest do
-workspace.NPCS.Quest9.ClickPart.QuestTake.QuestTake.Accept3.RemoteEvent:FireServer()
-wait(0.1)
-end
-elseif selectedQuest == "Auto Quest 2 - Grab" then
-while autoQuest do
-workspace.NPCS.Quest7.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
-wait(0.1)
-end
-elseif selectedQuest == "Auto Quest 3 - Sukuna" then
-while autoQuest do
-workspace.NPCS.Quest6.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
-wait(0.1)
-end
-elseif selectedQuest == "Auto Quest 4 - Kaido" then
-while autoQuest do
-workspace.NPCS.Quest0.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
-wait(0.1)
-end
-elseif selectedQuest == "Auto Quest 5 - Nickbeo" then
-while autoQuest do
-workspace.NPCS.Quest4.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
-wait(0.1)
-end
-elseif selectedQuest == "Auto Quest 6 - Tengen" then
-while autoQuest do
-workspace.NPCS.Quest5.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
-wait(0.1)
-end
-elseif selectedQuest == "Auto Quest 7 - Paw" then
-while autoQuest do
-workspace.NPCS.Quest1.ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()
-wait(0.1)
-end
-elseif selectedQuest == "Auto Quest 8 - Cid" then
-while autoQuest do
-workspace.NPCS.Quest8.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
-wait(0.1)
-end
-elseif selectedQuest == "Auto Quest 9 - Geto" then
-while autoQuest do
-workspace.NPCS.Quest8.ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()
-wait(0.1)
-end
-elseif selectedQuest == "Auto Quest 10 - Magma" then
-while autoQuest do
-workspace.NPCS.Quest2.ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()
-wait(0.1)
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
 end
 end
 end
 end)
+end)
+
+drops:Button("inf skill ", false, function()local player = game.Players.LocalPlayer
+for i = 1, 1000 do
+workspace.MAP["STARTER ISLAND [ Lv 1+ ]"]:GetChildren()[5]["Real Triple Katana"].Z.Fire:FireServer()
+end
