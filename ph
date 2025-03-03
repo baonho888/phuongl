@@ -8,7 +8,7 @@ local dis = nil
 local aura = false
 local autoQuest = false
 local selectedQuest = ""
-
+local drops = serv:Channel("inf skill")
 while true do
 for i = 1, 1000 do
 workspace.MAP["STARTER ISLAND [ Lv 1+ ]"]:GetChildren()[5]["Real Triple Katana"].Z.Fire:FireServer()
