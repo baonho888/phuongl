@@ -9,7 +9,11 @@ local aura = false
 local autoQuest = false
 local selectedQuest = ""
 
-tgls:Toggle("Auto Sword",false, function(z) 
+ local tgls = serv:Channel("Stats+Auto Skill") 
+  tgls:Toggle("Auto Sword",false, function(z) 
+ getgenv().autostats = z 
+ spawn(function() 
+ while autostats do wait() 
 for i = 1, 1000 do
 workspace.MAP["STARTER ISLAND [ Lv 1+ ]"]:GetChildren()[5]["Real Triple Katana"].Z.Fire:FireServer()
 end
