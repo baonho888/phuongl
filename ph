@@ -216,7 +216,21 @@ drops:Dropdown(
         print(bool)
     end)
 
-
+drops:Toggle("Auto Katana 🗡️", false, function(t)
+    aura = t
+    task.spawn(function()
+        while aura do
+            local children = workspace.MAP["STARTER ISLAND [ Lv 1+ ]"]:GetChildren()
+            for _, v in pairs(children) do
+                local katana = v:FindFirstChild("Real Triple Katana")
+                if katana and katana:FindFirstChild("Z") and katana.Z:FindFirstChild("Fire") then
+                    katana.Z.Fire:FireServer()
+                end
+            end
+            wait(0.1)
+        end
+    end)
+end)
 
 local drops = serv:Channel("Teleport island⭐")
 drops:Button("đảo khởi đầu", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485.583771, 35.5632935, -511.945404)
