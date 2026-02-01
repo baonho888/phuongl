@@ -254,8 +254,7 @@ drops:Button("đảo cid và geto",  function()game.Players.LocalPlayer.Characte
 end)
 drops:Button( "đảo sun",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1603, 87700, -2191)
 end)
-drops:Button( "đảo ",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6321.96729, 87714.7656, -2994.5603)
-end)
+
 
 local drops = serv:Channel("pvp")
 drops:Button("speed", function()
