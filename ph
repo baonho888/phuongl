@@ -255,8 +255,7 @@ end)
 drops:Button( "đảo sun",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1603, 87700, -2191)
 end)
 
-drops:Button( "đảo moi",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6336.59717,87714.7188,-2970.33301,0.285285205,-5.79211274e-08,0.958442688,1.26386164e-08,1,5.66705971e-08)
-end)
+game:GetService("Workspace").Map-Islands.Godly-Island[Lv800.000].Godss.SPart
 
 local drops = serv:Channel("pvp")
 drops:Button("speed", function()
