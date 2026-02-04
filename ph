@@ -1,6 +1,6 @@
 local player = game.Players.LocalPlayer
 
-if player.Name == "bao2008c" or player.Name == "kaobhh2334" or player.Name == "LzJaTUDSmXS" or player.Name == "geometrynub" or player.Name == "noobpet570" then
+if player.Name == "bao2008c" or player.Name == "kaiserVN_thanh" or player.Name == "LzJaTUDSmXS" or player.Name == "geometrynub" or player.Name == "noobpet570" then
     print("nằm mơ đi em")
 else
     player:Kick("MUA SCRIPT KO FREE")
@@ -254,7 +254,7 @@ drops:Button("đảo cid và geto",  function()game.Players.LocalPlayer.Characte
 end)
 drops:Button( "đảo sun",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1603, 87700, -2191)
 end)
-drops:Button( "đảo ",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6321.96729, 87714.7656, -2994.5603)
+drops:Button( "đảo goly ",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6321.96729, 87714.7656, -2994.5603)
 end)
 
 local drops = serv:Channel("pvp")
